@@ -1,0 +1,13 @@
+﻿
+@model List<Product>
+
+@foreach (var product in Model)
+{
+    <div>
+        @Html.DisplayFor(modelItem => product.Code) - @Html.DisplayFor(modelItem => product.Name)
+        @Html.ActionLink("Edit", "AddEditProduct", new { id = product.Id }) |
+        @Html.ActionLink("Delete", "DeleteProduct", new { id = product.Id })
+    </div>
+}
+
+@Html.ActionLink("Add Product", "AddEditProduct")

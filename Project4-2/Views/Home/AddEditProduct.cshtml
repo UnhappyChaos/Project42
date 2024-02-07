@@ -1,0 +1,26 @@
+﻿@model Product
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div>
+        @Html.LabelFor(model => model.Code)
+        @Html.EditorFor(model => model.Code)
+        @Html.ValidationMessageFor(model => model.Code)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.ReleaseDate)
+        @Html.EditorFor(model => model.ReleaseDate)
+        @Html.ValidationMessageFor(model => model.ReleaseDate)
+    </div>
+
+    <input type="submit" value="Save" />
+}
