@@ -70,3 +70,4 @@ public class ProductController : Controller
         return RedirectToAction("Index");
     }
 }
+//this is a comment made in Visual Studio and will soon be made in GitHub
